@@ -356,6 +356,14 @@ article img {
 		font-size: 3vw;
 		padding-left: 3vw;
 	}
+
+	@media screen and (max-width: 500px) {
+		img.modal-image {
+			width: 100%;
+			height: auto;
+
+		}
+	}
 }
 
 /*new modal below this line*/
