@@ -4,6 +4,20 @@
 	box-sizing: border-box;
 }
 
+/*
+:root {
+	--font-family: Avenir;
+	--color: hotpink;
+	--padding: .5rem;
+}
+
+#top {
+	font-family: var(--font-family);
+	padding: var(--padding);
+		color: var(--color);
+*/
+/*}*/
+
 header {
 	background-image: url(img/sky1.jpg);
 	border-radius: 5px
@@ -29,6 +43,7 @@ body {
 
 }
 
+
 .jump {
 	text-decoration: none;
 	color: black;
@@ -37,9 +52,32 @@ body {
 	font-family: Avenir, Roboto, Helvetica, san-serif;
 }
 
+.jumptop {
+	text-decoration: none;
+	color: black;
+	font-size: 1.2rem;
+	padding-left: 2.2rem;
+	font-family: Avenir, Roboto, Helvetica, san-serif;
+	/*	position: absolute;*/
+	/* display: flex; */
+	text-align: left;
+
+}
+
+#feet {
+	display: grid;
+	/* 	flex-direction: row-reverse;
+	align-self: flex-start; */
+	grid-template-columns: repeat(3, 1fr);
+	-ms-align-items: center;
+	align-items: center;
+}
+
 HTML {
 	scroll-behavior: smooth;
 }
+
+
 
 main > section {
 	display: grid;
@@ -90,7 +128,7 @@ main > section h1 {
 }
 
 .nav-items a:hover {
-	transition: all .3 ease;
+	transition: all .3s ease;
 }
 
 .nav-items a:hover {
@@ -171,7 +209,7 @@ button {
 }
 
 footer {
-	display: block;
+	display: flex;
 	text-align: center;
 	width: 100%;
 	padding-bottom: 1rem;
@@ -238,7 +276,7 @@ button {
 	padding: .5rem;
 	border: none;
 	color: black;
-	transition: all .3 ease;
+	transition: all .3s ease;
 }
 
 button:hover {
@@ -258,6 +296,7 @@ article img {
 	display: block;
 	margin-top: auto;
 	height: auto;
+	align-self: center;
 }
 
 

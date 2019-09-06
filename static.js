@@ -41,6 +41,12 @@ function showDish(dish) {
 
 	copy.querySelector(".data_img").src = "img/small/" + dish.image + "-sm.jpg";
 
+
+
+	//	copy.querySelector(".data_vegetarian").textContent = dish.vegetarian;
+
+
+
 	if (dish.discount) {
 		copy.querySelector(".data_price").classList.add("discount");
 		//		calculate the new price WITH DISCOUNTS
@@ -56,6 +62,28 @@ function showDish(dish) {
 	} else {
 		copy.querySelector(".soldOut").remove();
 	}
+
+
+
+
+	if (dish.vegetarian) {
+		//alert("hey");
+		copy.querySelector(".data_vegetarian").textContent = "VEGETARIAN!!";
+	} else {
+		copy.querySelector(".data_vegetarian").remove();
+	}
+
+
+
+	if (modal.vegetarian) {
+		modal.querySelector(".modal-vegetarian").textContent = "VEGETARIAN!!";
+	}
+
+
+
+
+
+
 
 	copy.querySelector("button").addEventListener("click", () => {
 		fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
@@ -77,7 +105,14 @@ function showDetails(data) {
 	modal.querySelector(".modal-name").textContent = data.name;
 	modal.querySelector(".modal-description").textContent = data.longdescription;
 	modal.querySelector(".modal-price").textContent = data.price;
-	modal.querySelector(".modal-image").src = "img/small/" + data.image + "-sm.jpg"
+	modal.querySelector(".modal-image").src = "img/small/" + data.image + "-sm.jpg";
+	let verdict = "Meat"
+	if (data.vegetarian) {
+		verdict = "Vegetarian"
+	}
+	modal.querySelector(".modal-vegetarian").textContent = verdict;
+
+	modal.querySelector(".modal-allergens").textContent = data.allergens;
 
 	modal.classList.remove("hide");
 }
@@ -101,29 +136,3 @@ function showDetails(data) {
 //	});
 //
 //
-//
-//
-//new MODAL for my javacript BELOW this line !!!
-
-
-//CLONE THE MODAL WHEN CLICKED
-//const modal = document.querySelector(".modal-background");
-//modal.addEventListener("click", () => {
-//	modal.classList.add("hide");
-//});
-
-//OUR CLONING Function
-//function showDish(dish){
-
-//copy.querySelector("button").addEventListener("click", () => {
-//	fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
-//		.then(res => res.json())
-//		.then(showDetails);
-//});
-//
-//
-//function showDetails(data) {
-//	modal.querySelector(".modal-name").textContent = data.name;
-//	modal.querySelector(".modal-description").textContent = data.longdescription;
-//	modal.classList.remove("hide");
-//}

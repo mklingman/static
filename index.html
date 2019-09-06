@@ -9,7 +9,7 @@
 	<title>Static Menu</title>
 </head>
 
-<body>
+<body id="top">
 
 	<header class="topics">
 		<ul class="nav-items">
@@ -37,6 +37,7 @@
 					<li class="soldOut">in stock</li>
 					<li class="data_price">4.50 €</li>
 					<li class="data_discount">2.70 €</li>
+					<li class="data_vegetarian">Vegetarian</li>
 				</ul>
 				<img class="data_img" src="" alt="">
 				<!--				<img class="beer" src="img/small/bochkarev-sm.jpg" alt="beerpic">-->
@@ -124,39 +125,34 @@
 
 	</main>
 
-	<!--YOUTUBE MODAL HTML
-	<div class="modal modal--hidden">
-		<div class="modal_contents">
-			<div class="modal_close-bar">
-				<span>x</span>
-			</div>
-			<p>Thank you for your selection! Please enjoy a half liter of Bochkarev draft beer from St Petersburg, Russia</p>
-			<p>There will be more information on your order here soon.</p>
-			<form id="learn-more">
-				<input type="email" placeholder="your email">
-				<button id="submit"> Submit</button>
-			</form>
-		</div>
-	</div>
--->
 
 
-	<footer id="feet">&copy; 2019 Big Meal Party Wagon</footer>
+
+	<footer id="feet">
+		<a href="#top" class="jumptop">&#8679; GO TO TOP &#8679;</a>
+		<p class="feets">
+			&copy; 2019 Big Meal Party Wagon
+		</p>
+
+
+	</footer>
 
 	<div class="modal-background hide">
 		<div class="modal-content">
 			<h3 class="modal-name">NAME</h3>
-			<img src"" alt"" class="modal-image">
+			<img src="img/small/caviarbruschetta-sm.jpg" alt="imageholder" class="modal-image">
 			<p class="modal-description">LONG DESCRIPTION</p>
 			<h4 class="modal-price">PRICE</h4>
+			<p class="modal-vegetarian">the verdict here</p>
+			<h4 class="modal-allergens">Allergens</h4>
 		</div>
 	</div>
 
 
-
+	<script src="static.js"></script>
 </body>
+
 
 </html>
 
 
-<script src="static.js"></script>
