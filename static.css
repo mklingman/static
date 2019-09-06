@@ -347,6 +347,15 @@ article img {
 
 	}
 
+
+
+}
+
+@media screen and (max-width: 611px) {
+	a.jumptop {
+		font-size: 3vw;
+		padding-left: 3vw;
+	}
 }
 
 /*new modal below this line*/
